@@ -19,4 +19,9 @@ def classify_image(inp):
 image = gr.inputs.Image(shape=(180, 180))
 label = gr.outputs.Label(num_top_classes=6)
 
-gr.Interface(fn=classify_image, title='Flower Recognizer', inputs=image, theme='dark-grass', outputs=label).launch()
+gr.Interface(fn=classify_image, 
+            title='Flower Recognizer', 
+            inputs=image, 
+            description="Recognize Flowers 'Daisy', 'Dandelion', 'Rose', 'Sunflower', 'Tulip' from Image",
+            theme='grass',
+            outputs=label).launch()
